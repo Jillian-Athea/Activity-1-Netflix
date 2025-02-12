@@ -2,8 +2,8 @@ import java.util.*;
 
 public class User {
     private String name;
-    private Map<String, Integer> genreWatchTime; // Genre -> Watch time
-    private Map<Movie, Integer> watchedMovies;   // Movie -> Watch time
+    private Map<String, Integer> genreWatchTime; 
+    private Map<Movie, Integer> watchedMovies;   
 
     public User(String name) {
         this.name = name;
@@ -18,7 +18,7 @@ public class User {
 
     public List<Map.Entry<Movie, Integer>> getRankedWatchHistory() {
         List<Map.Entry<Movie, Integer>> sortedMovies = new ArrayList<>(watchedMovies.entrySet());
-        sortedMovies.sort((a, b) -> b.getValue().compareTo(a.getValue())); // Sort descending by watch time
+        sortedMovies.sort((a, b) -> b.getValue().compareTo(a.getValue())); 
         return sortedMovies;
     }
 
